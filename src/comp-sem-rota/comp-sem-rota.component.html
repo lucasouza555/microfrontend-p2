@@ -1,0 +1,67 @@
+<h2>Componente sem rota (Projeto 2)</h2>
+
+<table *ngIf="itens?.length > 0">
+    <thead>
+        <tr>
+            <th>
+                Código
+            </th>
+            <th>
+                Descrição
+            </th>
+            <th>
+                Valor
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of itens">
+            <td>
+                {{item.codigo}}
+            </td>
+            <td>
+                {{item.descricao}}
+            </td>
+            <td>
+                {{item.valor}}
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<button (click)="onClick()">Teste</button>
+
+<table *ngIf="mensagens?.length > 0">
+    <thead>
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Título
+            </th>
+            <th>
+                Descrição
+            </th>
+            <th>
+                Data de criação
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let mensagem of mensagens">
+            <td>
+                {{mensagem.id}}
+            </td>
+            <td>
+                {{mensagem.titulo}}
+            </td>
+            <td>
+                {{mensagem.mensagem}}
+            </td>
+            <td>
+                {{mensagem.dataCriacao}}
+            </td>
+        </tr>
+    </tbody>
+</table>
